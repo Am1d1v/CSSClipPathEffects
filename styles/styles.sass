@@ -5,13 +5,13 @@
     padding: 0
     margin: 0
 
-body
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    min-height: 100vh
-    background-color: #2f2f2f
+// body
+//     display: flex
+//     flex-direction: column
+//     justify-content: center
+//     align-items: center
+//     min-height: 100vh
+//     background-color: #2f2f2f
 
    
 // Clip Path Shaper   
@@ -73,51 +73,81 @@ body
 
 
 // Wavy Effect
-.wave
-    position: relative
-    width: 500px
-    height: 500px
-    display: flex
-    justify-content: center
-    align-items: center
-    h2
-        position: absolute
-        font-size: 180px
-        text-transform: uppercase
-        &:nth-child(1)
-            color: #7efff5
-        &:nth-child(2)
-            color: #1d3c6b
-            animation: wave 2s infinite
+// .wave
+//     position: relative
+//     width: 500px
+//     height: 500px
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     h2
+//         position: absolute
+//         font-size: 180px
+//         text-transform: uppercase
+//         &:nth-child(1)
+//             color: #7efff5
+//         &:nth-child(2)
+//             color: #1d3c6b
+//             animation: wave 2s infinite
 
-.wave-transparent
-    position: relative
-    width: 500px
-    height: 500px
-    display: flex
-    justify-content: center
-    align-items: center
-    h2
-        position: absolute
-        font-size: 180px
-        text-transform: uppercase
-        &:nth-child(1)
-            color: transparent
-            -webkit-text-stroke: 1px #6e3066
-        &:nth-child(2)
-            color: #e41bb8
-            animation: wave 2s infinite
+// .wave-transparent
+//     position: relative
+//     width: 500px
+//     height: 500px
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     h2
+//         position: absolute
+//         font-size: 180px
+//         text-transform: uppercase
+//         &:nth-child(1)
+//             color: transparent
+//             -webkit-text-stroke: 1px #6e3066
+//         &:nth-child(2)
+//             color: #e41bb8
+//             animation: wave 2s infinite
             
                 
-@keyframes wave
-    0%
-        clip-path: polygon(0% 30%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%)
-    50%
-        clip-path: polygon(0% 49%, 16% 56%, 33% 55%, 55% 50%, 75% 42%, 100% 40%, 100% 100%, 0% 100%)
-    100%
-        clip-path: polygon(0% 30%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%)
-                    
-            
+// @keyframes wave
+//     0%
+//         clip-path: polygon(0% 30%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%)
+//     50%
+//         clip-path: polygon(0% 49%, 16% 56%, 33% 55%, 55% 50%, 75% 42%, 100% 40%, 100% 100%, 0% 100%)
+//     100%
+//         clip-path: polygon(0% 30%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%)
 
 
+// Image to circle hover effect    
+body
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+                        
+.card
+    position: relative
+    width: 360px
+    height: 500px
+    & .img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        transition: all 0.6s
+        clip-path: circle(69% at 50% 50%)
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &:hover .img
+        clip-path: circle(15% at 50% 45%)
+        
+.content
+    position: absolute
+    left: 0
+    bottom: 50px
+    text-align: center
+                
 
