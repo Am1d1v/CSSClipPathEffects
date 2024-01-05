@@ -31,6 +31,7 @@ ul li a {
   font-size: 60px;
   font-weight: 900;
   text-decoration: none;
+  color: transparent;
 }
 ul li a::before {
   content: attr(data-text);
@@ -42,4 +43,23 @@ ul li a::before {
   color: #262626;
   box-sizing: border-box;
   transition: 0.6s;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+ul li a::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 10px;
+  color: #262626;
+  box-sizing: border-box;
+  transition: 0.6s;
+  -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+ul li a:hover:before {
+  color: #9c4dc0;
+  transform: translate(10px, -3px);
 }/*# sourceMappingURL=styles.css.map */
