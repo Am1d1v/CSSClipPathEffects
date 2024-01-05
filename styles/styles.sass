@@ -38,37 +38,68 @@ body
 
 
 // Clip Path Hover Image Effect
-.container
-    position: relative
-    width: 900px
-    height: 600px
-    background-color: #222
-    & .clip
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        transition: all 0.6s
-    .clip1
-        background: url('https://images.unsplash.com/photo-1704080668828-5ed22e758590?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
-        background-size: cover
-        background-position: center
-        clip-path: polygon(0% 0%, 17% 0%, 49% 100%, 0% 100%)
-    .clip2
-        background: url('https://images.unsplash.com/photo-1704026437902-699fa6a8c98d?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
-        background-size: cover
-        background-position: center
-        clip-path: polygon(13% 0%, 81% 0%, 59% 100%, 36% 100%)
-    .clip3
-        background: url('https://images.unsplash.com/photo-1704037318316-1f988fd5edaa?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
-        background-size: cover
-        background-position: center
-        clip-path: polygon(79% 0%, 100% 0%, 100% 100%, 59% 100%)
-    &:hover .clip
-        clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)
-    & .clip
-        &:hover
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)    
+// .container
+//     position: relative
+//     width: 900px
+//     height: 600px
+//     background-color: #222
+//     & .clip
+//         position: absolute
+//         top: 0
+//         left: 0
+//         width: 100%
+//         height: 100%
+//         transition: all 0.6s
+//     .clip1
+//         background: url('https://images.unsplash.com/photo-1704080668828-5ed22e758590?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+//         background-size: cover
+//         background-position: center
+//         clip-path: polygon(0% 0%, 17% 0%, 49% 100%, 0% 100%)
+//     .clip2
+//         background: url('https://images.unsplash.com/photo-1704026437902-699fa6a8c98d?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+//         background-size: cover
+//         background-position: center
+//         clip-path: polygon(13% 0%, 81% 0%, 59% 100%, 36% 100%)
+//     .clip3
+//         background: url('https://images.unsplash.com/photo-1704037318316-1f988fd5edaa?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+//         background-size: cover
+//         background-position: center
+//         clip-path: polygon(79% 0%, 100% 0%, 100% 100%, 59% 100%)
+//     &:hover .clip
+//         clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)
+//     & .clip
+//         &:hover
+//             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)    
 
+
+// Wavy Effect
+.wave
+    position: relative
+    width: 500px
+    height: 500px
+    display: flex
+    justify-content: center
+    align-items: center
+    h2
+        position: absolute
+        font-size: 180px
+        text-transform: uppercase
+        &:nth-child(1)
+            color: #7efff5
+        &:nth-child(2)
+            color: #1d3c6b
+            animation: wave 2s infinite
             
+                
+@keyframes wave
+    0%
+        clip-path: polygon(0% 30%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%)
+    50%
+        clip-path: polygon(0% 49%, 16% 56%, 33% 55%, 55% 50%, 75% 42%, 100% 40%, 100% 100%, 0% 100%)
+    100%
+        clip-path: polygon(0% 30%, 21% 40%, 38% 51%, 54% 57%, 75% 57%, 100% 52%, 100% 100%, 0% 100%)
+                    
+            
+
+
+
