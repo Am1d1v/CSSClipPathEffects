@@ -89,6 +89,24 @@ body
         &:nth-child(2)
             color: #1d3c6b
             animation: wave 2s infinite
+
+.wave-transparent
+    position: relative
+    width: 500px
+    height: 500px
+    display: flex
+    justify-content: center
+    align-items: center
+    h2
+        position: absolute
+        font-size: 180px
+        text-transform: uppercase
+        &:nth-child(1)
+            color: transparent
+            -webkit-text-stroke: 1px #6e3066
+        &:nth-child(2)
+            color: #e41bb8
+            animation: wave 2s infinite
             
                 
 @keyframes wave
